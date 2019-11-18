@@ -1,5 +1,5 @@
 {
-    "name": "gustavo/laravel-flash",
+    "name": "josegus/laravel-flash",
     "require": {
         "illuminate/session": "6.*"
     },
