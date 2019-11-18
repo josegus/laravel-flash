@@ -1,0 +1,8 @@
+.phpunit.result.cache
+.idea
+workspace.xml
+build
+composer.lock
+docs
+vendor
+coverage

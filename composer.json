@@ -1,0 +1,39 @@
+{
+    "name": "gustavo/laravel-flash",
+    "require": {
+        "illuminate/session": "6.*"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^4.3"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Gustavo",
+            "email": "jgvv15@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "JoseGus\\LaravelFlash\\": "src"
+        },
+        "files": [
+            "helpers/flash.php"
+        ]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "JoseGus\\LaravelFlash\\Test\\": "tests"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "JoseGus\\LaravelFlash\\LaravelFlashServiceProvider"
+            ]
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit"
+    }
+}
