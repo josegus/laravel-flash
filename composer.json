@@ -1,10 +1,12 @@
 {
     "name": "josegus/laravel-flash",
     "require": {
-        "illuminate/session": "6.*"
+        "php": ">=7.0",
+        "illuminate/session": "^6.0|^7.0",
+        "illuminate/support": "^6.0|^7.0"
     },
     "require-dev": {
-        "orchestra/testbench": "^4.3"
+        "orchestra/testbench": "^4.0|^5.0"
     },
     "license": "MIT",
     "authors": [
@@ -15,7 +17,7 @@
     ],
     "autoload": {
         "psr-4": {
-            "JoseGus\\LaravelFlash\\": "src"
+            "JoseGus\\LaravelFlash\\": "src/"
         },
         "files": [
             "helpers/flash.php"
@@ -33,6 +35,7 @@
             ]
         }
     },
+    "minimum-stability": "stable",
     "scripts": {
         "test": "vendor/bin/phpunit"
     }

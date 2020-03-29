@@ -8,16 +8,6 @@ use JoseGus\LaravelFlash\LaravelFlashServiceProvider;
 abstract class TestCase extends Orchestra
 {
     /**
-     * @var
-     */
-    protected $errorKey;
-
-    /**
-     * @var
-     */
-    protected $successKey;
-
-    /**
      * Setup the test environment.
      *
      * @return void
@@ -25,10 +15,6 @@ abstract class TestCase extends Orchestra
     public function setUp(): void
     {
         parent::setUp();
-
-        $this->errorKey = $this->app['config']['laravel-flash.keys.error'];
-
-        $this->successKey = $this->app['config']['laravel-flash.keys.success'];
     }
 
     /**
