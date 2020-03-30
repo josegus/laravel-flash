@@ -36,7 +36,7 @@ class Flash
      */
     public function success($message = null)
     {
-        return $this->putFlash('success', $message ?? config('laravel-flash.messages.success'));
+        return $this->putFlash('success', $message ?? config('flash.messages.success'));
     }
 
     /**
@@ -47,7 +47,7 @@ class Flash
      */
     public function error($message = null)
     {
-        return $this->putFlash('danger', $message ?? config('laravel-flash.messages.error'));
+        return $this->putFlash('danger', $message ?? config('flash.messages.error'));
     }
 
     /**
@@ -58,7 +58,7 @@ class Flash
      */
     public function warning($message = null)
     {
-        return $this->putFlash('warning', $message ?? config('laravel-flash.messages.stored'));
+        return $this->putFlash('warning', $message ?? config('flash.messages.stored'));
     }
 
     /**
@@ -69,7 +69,7 @@ class Flash
      */
     public function stored($message = null)
     {
-        return $this->putFlash('success', $message ?? config('laravel-flash.messages.stored'));
+        return $this->putFlash('success', $message ?? config('flash.messages.stored'));
     }
 
     /**
@@ -80,7 +80,7 @@ class Flash
      */
     public function updated($message = null)
     {
-        return $this->putFlash('success', $message ?? config('laravel-flash.messages.updated'));
+        return $this->putFlash('success', $message ?? config('flash.messages.updated'));
     }
 
     /**
@@ -91,7 +91,7 @@ class Flash
      */
     public function deleted($message = null)
     {
-        return $this->putFlash('success', $message ?? config('laravel-flash.messages.deleted'));
+        return $this->putFlash('success', $message ?? config('flash.messages.deleted'));
     }
 
     /**
@@ -122,7 +122,7 @@ class Flash
         session()->flash('flash_notification', [
             'type' => $this->type,
             'message' => $this->message,
-            'dismissible' => config('laravel-flash.dismissible')
+            'dismissible' => config('flash.dismissible')
         ]);
 
         return $this;

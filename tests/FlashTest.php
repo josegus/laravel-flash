@@ -20,7 +20,7 @@ class FlashTest extends TestCase
         $expected = [
             'type' => 'success',
             'message' => 'A custom message',
-            'dismissible' => config('laravel-flash.dismissible')
+            'dismissible' => config('flash.dismissible')
         ];
 
         $actual = session('flash_notification');

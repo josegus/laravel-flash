@@ -17,14 +17,14 @@ class LaravelFlashServiceProvider extends ServiceProvider
     public function register()
     {
         $this->mergeConfigFrom(
-            __DIR__.'/../config/laravel-flash.php', 'laravel-flash'
+            __DIR__.'/../config/flash.php', 'flash'
         );
     }
 
     protected function publishConfig()
     {
         $this->publishes([
-            __DIR__.'/../config/laravel-flash.php' => config_path('laravel-flash.php')
+            __DIR__.'/../config/flash.php' => config_path('flash.php')
         ], 'laravel-flash:config');
     }
 

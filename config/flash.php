@@ -10,7 +10,7 @@ return [
     /*
      * Extra class applied to each alert
      */
-    'class' => 'js-alert-hook fade show',
+    'class' => 'fade show',
 
     /*
      * Default messages used for all available actions
