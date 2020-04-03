@@ -11,7 +11,7 @@ or CRUD operations (stored, updated, deleted.)
 Require the package by executing:
 
 ```bash
-composer require josegus/flash
+composer require josegus/laravel-flash
 ```
 
 
@@ -57,7 +57,7 @@ with the package:
 You can export the config file to change default messages, views and enable some extra features. You may do su executing:
 
 ```bash
-php artisan vendor:publish --tag=flash:config
+php artisan vendor:publish --tag=aravel-flash:config
 ```
 
 Now you should have a `flash.php` file inside the config folder. Don't forget to use `--force` if you need to force to re-publish the config file.
@@ -68,7 +68,7 @@ Now you should have a `flash.php` file inside the config folder. Don't forget to
 You can export the included views to adapt to your needs. You may do su executing:
 
 ```bash
-php artisan vendor:publish --tag=flash:views
+php artisan vendor:publish --tag=laravel-flash:views
 ```
 
 Now you should have views inside `resources/views/vendor/flash` folder. Don't forget to use `--force` if you need to force to re-publish the config file.
@@ -76,9 +76,15 @@ Now you should have views inside `resources/views/vendor/flash` folder. Don't fo
 
 ## Using default validations view
 
-The package includes a view to show validation errors as an unordered list by default.
+By default, the package show the validation errors inside the `flash::message` view. Validation errors are showed inside a "alert-danger" as an unordered list by default.
 
-You can modify this view to adapt to your needs, or disable this view by changing `flash.validations.enabled` to "false".
+You can disable this behaviour by changing `flash.validations.enabled` to `false` in config/flash.php file.
+
+If you wish, you can modify this view to adapt to your needs, executing:
+
+```bash
+php artisan vendor:publish --tag=laravel-flash:views
+``` 
 
 
 ## Example
