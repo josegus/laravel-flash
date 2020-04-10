@@ -57,7 +57,7 @@ with the package:
 You can export the config file to change default messages, views and enable some extra features. You may do su executing:
 
 ```bash
-php artisan vendor:publish --tag=aravel-flash:config
+php artisan vendor:publish --tag=laravel-flash:config
 ```
 
 Now you should have a `flash.php` file inside the config folder. Don't forget to use `--force` if you need to force to re-publish the config file.
@@ -121,7 +121,32 @@ necessary stylesheets.
 ### All alerts dismissible by default
 
 By default, all alerts are dismissible. You can disable this by changing `flash.dismissible` to `false`.
-If you set this to false, you still can make dismissible a certain alert when calling `->dismissible()`, or disabling 
-dismissible by calling `->dismissible(false)`.
- 
- 
+If you set `flash.dismissible` `false`, you still can make dismissible a certain alert by chaining:
+ ```php
+    flash()->dismissible();
+``` 
+
+Or disabling dismissible by calling:
+ ```php 
+    flash()->dismissible(false);
+```
+
+## Examples
+
+Success 
+<img src="https://y7mzpq.dm.files.1drv.com/y4mc7i265bKo66PzVtKNhakIWbZ40vjKZcVwCuTpSQs8aMpyFP3fLssuf2oFHzHP_8YSQXhuAExIFbmZ6fzc9aBuIk9iJHpFiaWg-gNzDzKZ8EybL4PHbHoPOKzL8BrJIsb1Y7ZJenSmQotFAmqEbHa1sJ1wRj7CwiYFdgfjzNfqrM4QNOII2zRBi1xGt9lbgNqiCA4Yl6N-cMhU-c5actxaQ?width=1917&height=920&cropmode=none" style="max-width: 100%; height: auto;" />
+
+Error
+<img src="https://y7nw1q.dm.files.1drv.com/y4mvegKmtEkOLCg2mFd20zxFLLHRjQG8CET3nmK2Nxw2dtFVAjsU1HAfpAxOd6TJszXJhVoEDbOTTHIeGabXv9zqJgxhD7KdrfFEsIL8tdQb7B40igHbkGOh-GdHch9HHU67SfWV5LBWAHzE_YjNFkn4RTn4OpQ6VjgC7n0LrpBajEAGUbawtbNyU6ogjyQfg8RRumAIgDkImW10p2XFZDo1w?width=1919&height=913&cropmode=none" style="max-width: 100%; height: auto;" />
+
+Warning
+<img src="https://y7pvya.dm.files.1drv.com/y4moGIAIFDzOfNP-HhXT6WHHGo3_ggWMTkzV3XJTIWB4AD52BVW4GpVUH6_YCeWiI7jn6MRjzfQM59Oi9ZetY8mJYyYNjkEisGsvXe3AcYmwfP8ue1NCPMdwBuhP3BCHjEGXiWkUn72jjDx3JvZLVZREzp_kG_T1FBCuIxOlPyh1ufFhK96PP3-cVxUDXlBnUeA5sQTD1Z8qk9HtIVIqg7-dg?width=1917&height=897&cropmode=none" style="max-width: 100%; height: auto;" />
+
+Dismissible
+<img src="https://y7m67a.dm.files.1drv.com/y4mx1XfpKTvbO8z8fXK94VMdmKHWE8CCPkaWrZnUDkYeLJoVIM5XYam1UUps-31lZm_N00NSI6KiDrsy2QCmuEODzpRnmrYuIMjn05qFBUS8s4eIgE5LUm8dLugEvw-AR_rqBHdAumvbtKrYmgdGY0xIjmGknrJrLpEdyVqp_M0VUTY-8aUv-vE4-aeWB6Wi7XyjjyZHX0X5A8_xlLnGZs8sA?width=1915&height=906&cropmode=none" style="max-width: 100%; height: auto;" />
+
+Static
+<img src="https://y7ofdw.dm.files.1drv.com/y4mIqDIp7sEF08BvYNZCTLj1BoDSoz4U1phc4mgUo4uZrP83n2Khr0CKh0QxU5chP7vBjhRtTfIpofW8dQYNRGK6ReaT8ggPmzJBOYCtMy78MHooiu097jWOp185_Gq4B6_K3thriMWHZjtrQSLSFWqGMwm_i5fzQljwr9Fk_ZxCVvHXeD5XnQcoqNRaqDYHrieyPuxUzI0YRufcPT8JIzTKg?width=1913&height=906&cropmode=none" style="max-width: 100%; height: auto;" />
+
+Validations
+<img src="https://y7pcpw.dm.files.1drv.com/y4moLRHOpF7Y8299I07oflSwramWTwtxa8hBuIlSotYIBfCu3BUFSHywUEREbKKmaR6g2h8_TWUMtWo87yKiFc4cV3YT_-PZYuN_4vb6ZnUg83IoitxSIKlHs0VnJJ3jU6QVSsJ_jaTgi17FV4EbgnVbbMcPnqWNZXKgM1VupX02MpOZOAuhtyrh8FBTOXXIJfDsuoCVsMthCNjDFqmZk514Q?width=1914&height=908&cropmode=none" style="max-width: 100%; height: auto;" />
