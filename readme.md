@@ -134,19 +134,27 @@ Or disabling dismissible by calling:
 ## Examples
 
 Success 
-<img src="https://y7mzpq.dm.files.1drv.com/y4mc7i265bKo66PzVtKNhakIWbZ40vjKZcVwCuTpSQs8aMpyFP3fLssuf2oFHzHP_8YSQXhuAExIFbmZ6fzc9aBuIk9iJHpFiaWg-gNzDzKZ8EybL4PHbHoPOKzL8BrJIsb1Y7ZJenSmQotFAmqEbHa1sJ1wRj7CwiYFdgfjzNfqrM4QNOII2zRBi1xGt9lbgNqiCA4Yl6N-cMhU-c5actxaQ?width=1917&height=920&cropmode=none" style="max-width: 100%; height: auto;" />
+<p align="center">
+    <img src="https://yd5dya.dm.files.1drv.com/y4mPLzxOupt5n4TV7CfrjdrnZw7I-V4uFZckhZInhipr3yac08H3NL46yv13RCr5hZAwlwgSFpD7Skc8_MZbUfWZ2bg6Qc9eD2kVaQW3gZhcbumvYW_NoGAxeqve4nk5oks7SwXZdnN9UPQhYeY7ZRtzT1F_5yL844_AskgvyJ9-PdXHJLZqaEJe4gGkeo9ahwPVWLL2apNJgbh4JHo6xacTw?width=959&height=468&cropmode=none" style="max-width: 100%; height: auto;" />
+</p>
 
 Error
-<img src="https://y7nw1q.dm.files.1drv.com/y4mvegKmtEkOLCg2mFd20zxFLLHRjQG8CET3nmK2Nxw2dtFVAjsU1HAfpAxOd6TJszXJhVoEDbOTTHIeGabXv9zqJgxhD7KdrfFEsIL8tdQb7B40igHbkGOh-GdHch9HHU67SfWV5LBWAHzE_YjNFkn4RTn4OpQ6VjgC7n0LrpBajEAGUbawtbNyU6ogjyQfg8RRumAIgDkImW10p2XFZDo1w?width=1919&height=913&cropmode=none" style="max-width: 100%; height: auto;" />
-
-Warning
-<img src="https://y7pvya.dm.files.1drv.com/y4moGIAIFDzOfNP-HhXT6WHHGo3_ggWMTkzV3XJTIWB4AD52BVW4GpVUH6_YCeWiI7jn6MRjzfQM59Oi9ZetY8mJYyYNjkEisGsvXe3AcYmwfP8ue1NCPMdwBuhP3BCHjEGXiWkUn72jjDx3JvZLVZREzp_kG_T1FBCuIxOlPyh1ufFhK96PP3-cVxUDXlBnUeA5sQTD1Z8qk9HtIVIqg7-dg?width=1917&height=897&cropmode=none" style="max-width: 100%; height: auto;" />
+<p align="center">
+    <img src="https://yd7c6w.dm.files.1drv.com/y4m3iSJ-pGxRrw5ymIy9Ku9FjVfZUq-Ptmb0se3hT8HeVaMokznf5C9QaUbz0tjcEPGxCHre2dJ0woGTVHPckPr4PwzUp8GzeNu85v4aTVsL_ww0xTYBdtrgVdfTgaxXTQ0PXJvayVRF1TaDqwM28JjNSUiITmkcBP5VD2vzWVuZqgvNQc_WvIL8Ax_jsViGsqjC3ZPh1rDU8cPp6umRj52Lw?width=962&height=480&cropmode=none" style="max-width: 100%; height: auto;" />
+</p>
 
 Dismissible
-<img src="https://y7m67a.dm.files.1drv.com/y4mx1XfpKTvbO8z8fXK94VMdmKHWE8CCPkaWrZnUDkYeLJoVIM5XYam1UUps-31lZm_N00NSI6KiDrsy2QCmuEODzpRnmrYuIMjn05qFBUS8s4eIgE5LUm8dLugEvw-AR_rqBHdAumvbtKrYmgdGY0xIjmGknrJrLpEdyVqp_M0VUTY-8aUv-vE4-aeWB6Wi7XyjjyZHX0X5A8_xlLnGZs8sA?width=1915&height=906&cropmode=none" style="max-width: 100%; height: auto;" />
+<p align="center">
+    <img src="https://yd4ndw.dm.files.1drv.com/y4mdMfxci20dQeNpvd_mVpK2YVahJ3ZmqnJRyONJv-R8dzNVVjVdLF5RrEfxvzCNXdU1IyaYKbk2FgBM6f5fCgGb9Cit7SpsMXanWD80MPYg4kdYTyz7FA0DNWi44cyuLs-meXARmeTAFFPd_Xbk0rdsILLqKbStGnwylMyUOBpiS6DelFsvmVb0VQM7yAcGb37ZJ3VR56fllyRtHWLADgM5A?width=958&height=470&cropmode=none" style="max-width: 100%; height: auto;" />
+</p>
 
 Static
-<img src="https://y7ofdw.dm.files.1drv.com/y4mIqDIp7sEF08BvYNZCTLj1BoDSoz4U1phc4mgUo4uZrP83n2Khr0CKh0QxU5chP7vBjhRtTfIpofW8dQYNRGK6ReaT8ggPmzJBOYCtMy78MHooiu097jWOp185_Gq4B6_K3thriMWHZjtrQSLSFWqGMwm_i5fzQljwr9Fk_ZxCVvHXeD5XnQcoqNRaqDYHrieyPuxUzI0YRufcPT8JIzTKg?width=1913&height=906&cropmode=none" style="max-width: 100%; height: auto;" />
+<p align="center">
+    <img src="https://yd6mag.dm.files.1drv.com/y4m_4iMCMfzfoHVFUKGaiyzc13sCVgSwkM44xjKnY6PN6MoYj307R71tteo5YdHZ5ZLFyWZvm_p0RxGcuGIXT-NaWj2GUXlFAdfZua7f_jWWcQaZTqwZX8YEeUqjAlqvPUAXLtCShkWS50HWEYIxLpDKcLlr4HLHtouy1bzyhm29I8qLlyMb1YSG5ZuI8cm4wCL8KDIIoMW9VgGNh-K2GkT_Q?width=961&height=473&cropmode=none" style="max-width: 100%; height: auto;" />
+</p>
 
 Validations
-<img src="https://y7pcpw.dm.files.1drv.com/y4moLRHOpF7Y8299I07oflSwramWTwtxa8hBuIlSotYIBfCu3BUFSHywUEREbKKmaR6g2h8_TWUMtWo87yKiFc4cV3YT_-PZYuN_4vb6ZnUg83IoitxSIKlHs0VnJJ3jU6QVSsJ_jaTgi17FV4EbgnVbbMcPnqWNZXKgM1VupX02MpOZOAuhtyrh8FBTOXXIJfDsuoCVsMthCNjDFqmZk514Q?width=1914&height=908&cropmode=none" style="max-width: 100%; height: auto;" />
+<p align="center">
+    <img src="https://y7nbmw.dm.files.1drv.com/y4mI2nhOE5IHfD52aJnfKh3Kb3mtvmCY4_HfQ9jHaz-2VC2y7HH9Ih3W4zv8lapLnZbWdiCxlEXay94BvronRsTSbBF9s_rPhxuDWTmP4afyezsCdf01dV4gjX8OFgX_4tCbc1A0mfO2AKHdbbeq6T-4XOPSQW4CaAXKPb_6FXx6ZhBTIvWjAMX5Gph-aboTjexVC4_kwoZpFCFveVQVBBClg?width=974&height=528&cropmode=none" style="max-width: 100%; height: auto;"/>
+</p> 
+
