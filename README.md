@@ -1,5 +1,7 @@
 # Flash messages an validations for your Laravel apps
 
+[![Build Status](https://travis-ci.com/josegus/laravel-flash.svg?branch=master)](https://travis-ci.com/josegus/laravel-flash)[![Build Status](https://travis-ci.com/josegus/laravel-flash.svg?branch=master)](https://travis-ci.com/josegus/laravel-flash)
+
 This composer package offers an easy way to manage and show laravel flash message notifications.
 
 It includes defaults messages for most commonly use cases such as default "success" o "error" message, 
