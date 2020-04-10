@@ -115,24 +115,6 @@ necessary stylesheets.
 </body>
 </html>
 ```
-
-## Tips
-
-### All alerts dismissible by default
-
-By default, all alerts are dismissible. You can disable this by changing `flash.dismissible` to `false`.
-If you set `flash.dismissible` `false`, you still can make dismissible a certain alert by chaining:
- ```php
-    flash()->dismissible();
-``` 
-
-Or disabling dismissible by calling:
- ```php 
-    flash()->dismissible(false);
-```
-
-## Examples
-
 Success 
 <p align="center">
     <img src="https://yd5dya.dm.files.1drv.com/y4mPLzxOupt5n4TV7CfrjdrnZw7I-V4uFZckhZInhipr3yac08H3NL46yv13RCr5hZAwlwgSFpD7Skc8_MZbUfWZ2bg6Qc9eD2kVaQW3gZhcbumvYW_NoGAxeqve4nk5oks7SwXZdnN9UPQhYeY7ZRtzT1F_5yL844_AskgvyJ9-PdXHJLZqaEJe4gGkeo9ahwPVWLL2apNJgbh4JHo6xacTw?width=959&height=468&cropmode=none" style="max-width: 100%; height: auto;" />
@@ -156,5 +138,40 @@ Static
 Validations
 <p align="center">
     <img src="https://y7nbmw.dm.files.1drv.com/y4mI2nhOE5IHfD52aJnfKh3Kb3mtvmCY4_HfQ9jHaz-2VC2y7HH9Ih3W4zv8lapLnZbWdiCxlEXay94BvronRsTSbBF9s_rPhxuDWTmP4afyezsCdf01dV4gjX8OFgX_4tCbc1A0mfO2AKHdbbeq6T-4XOPSQW4CaAXKPb_6FXx6ZhBTIvWjAMX5Gph-aboTjexVC4_kwoZpFCFveVQVBBClg?width=974&height=528&cropmode=none" style="max-width: 100%; height: auto;"/>
-</p> 
+</p>
 
+## Tips
+
+### All alerts dismissible by default
+
+By default, all alerts are dismissible. You can disable this by changing `flash.dismissible` to `false`.
+If you set `flash.dismissible` `false`, you still can make dismissible a certain alert by chaining:
+ ```php
+    flash()->dismissible();
+``` 
+
+Or make a certain alert static by calling:
+ ```php 
+    flash()->dismissible(false);
+```
+
+## Why another flash package?
+
+There are great packages to create flash messages:
+
+- [flash](https://github.com/laracasts/flash) by [Jeffrey Way](https://github.com/JeffreyWay)
+- [laravel-flash](https://github.com/spatie/laravel-flash) by [Spatie](https://github.com/spatie)
+- [laravel-flash](https://github.com/coderello/laraflash) by [Coderello](https://github.com/coderello)
+
+The main difference with each one is the ability to set a default message for most common actions 
+(a success action, a model stored, a model updated, a model deleted..).
+
+I decided to create this package to suit my own needs, as most of the time I end up working with many controllers with
+the basic CRUD operations (Cread, Read, Update, Delete) and writing a message for each operation does not seem to me
+to be the best way to handle the same message for each operation. 
+
+## Testing
+
+``` bash
+composer test
+```
