@@ -1,9 +1,9 @@
 <?php
 
-namespace JoseGus\LaravelFlash\Test;
+namespace JoseGus\LaravelFlash\Tests;
 
-use Orchestra\Testbench\TestCase as Orchestra;
 use JoseGus\LaravelFlash\LaravelFlashServiceProvider;
+use Orchestra\Testbench\TestCase as Orchestra;
 
 abstract class TestCase extends Orchestra
 {
@@ -12,7 +12,7 @@ abstract class TestCase extends Orchestra
      *
      * @return void
      */
-    public function setUp(): void
+    protected function setUp(): void
     {
         parent::setUp();
     }
@@ -27,5 +27,18 @@ abstract class TestCase extends Orchestra
     protected function getPackageProviders($app)
     {
         return [LaravelFlashServiceProvider::class];
+    }
+
+    public function notificationTypes(): array
+    {
+        return [
+            ['success'],
+            ['error'],
+            ['warning'],
+            ['stored'],
+            ['updated'],
+            ['deleted'],
+            ['queued'],
+        ];
     }
 }

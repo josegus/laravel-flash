@@ -8,8 +8,7 @@ class LaravelFlashServiceProvider extends ServiceProvider
 {
     public function boot()
     {
-        $this->loadViewsFrom(__DIR__.'/views', 'flash');
-
+        $this->loadViewsFrom(__DIR__.'/../resources/views', 'flash');
         $this->publishViews();
         $this->publishConfig();
     }
@@ -17,21 +16,22 @@ class LaravelFlashServiceProvider extends ServiceProvider
     public function register()
     {
         $this->mergeConfigFrom(
-            __DIR__.'/../config/flash.php', 'flash'
+            __DIR__.'/../config/flash.php',
+            'flash'
         );
     }
 
     protected function publishConfig()
     {
         $this->publishes([
-            __DIR__.'/../config/flash.php' => config_path('flash.php')
+            __DIR__.'/../config/flash.php' => config_path('flash.php'),
         ], 'laravel-flash:config');
     }
 
     protected function publishViews()
     {
         $this->publishes([
-            __DIR__.'/views' => base_path('resources/views/vendor/flash')
+            __DIR__.'/../resources/views' => base_path('resources/views/vendor/flash'),
         ], 'laravel-flash:views');
     }
 }

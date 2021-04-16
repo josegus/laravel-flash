@@ -5,7 +5,9 @@
         "illuminate/session": "^6.0|^7.0|^8.0"
     },
     "require-dev": {
-        "orchestra/testbench": "^4.0|^5.0|^6.0"
+        "friendsofphp/php-cs-fixer": "^2.18",
+        "orchestra/testbench": "^4.0|^5.0|^6.0",
+        "vimeo/psalm": "^4.7"
     },
     "license": "MIT",
     "authors": [
@@ -24,7 +26,7 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "JoseGus\\LaravelFlash\\Test\\": "tests"
+            "JoseGus\\LaravelFlash\\Tests\\": "tests"
         }
     },
     "extra": {
@@ -34,8 +36,14 @@
             ]
         }
     },
-    "minimum-stability": "stable",
     "scripts": {
+        "format": "vendor/bin/php-cs-fixer fix --allow-risky=yes",
+        "psalm": "vendor/bin/psalm",
         "test": "vendor/bin/phpunit"
-    }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
 }
