@@ -10,11 +10,9 @@ class Flash
 
     protected function __construct($message = null)
     {
-        $this->type = 'success';
-
         $this->message = $message;
 
-        $this->putFlash($this->type, $this->message);
+        $this->putFlash('success');
     }
 
     /**
@@ -47,7 +45,7 @@ class Flash
      */
     public function error($message = null)
     {
-        return $this->putFlash('danger', $message ?? config('flash.messages.error'));
+        return $this->putFlash('error', $message ?? config('flash.messages.error'));
     }
 
     /**
@@ -58,7 +56,7 @@ class Flash
      */
     public function warning($message = null)
     {
-        return $this->putFlash('warning', $message ?? config('flash.messages.stored'));
+        return $this->putFlash('warning', $message ?? config('flash.messages.warning'));
     }
 
     /**
@@ -69,7 +67,7 @@ class Flash
      */
     public function stored($message = null)
     {
-        return $this->putFlash('success', $message ?? config('flash.messages.stored'));
+        return $this->putFlash('stored', $message ?? config('flash.messages.stored'));
     }
 
     /**
@@ -80,7 +78,7 @@ class Flash
      */
     public function updated($message = null)
     {
-        return $this->putFlash('success', $message ?? config('flash.messages.updated'));
+        return $this->putFlash('updated', $message ?? config('flash.messages.updated'));
     }
 
     /**
@@ -91,7 +89,18 @@ class Flash
      */
     public function deleted($message = null)
     {
-        return $this->putFlash('success', $message ?? config('flash.messages.deleted'));
+        return $this->putFlash('deleted', $message ?? config('flash.messages.deleted'));
+    }
+
+    /**
+     * Flash a new "queued" message
+     *
+     * @param null $message
+     * @return $this
+     */
+    public function queued($message = null)
+    {
+        return $this->putFlash('queued', $message ?? config('flash.messages.queued'));
     }
 
     /**
@@ -99,11 +108,7 @@ class Flash
      */
     public function dismissible($dismissible = true)
     {
-        session()->flash('flash_notification', [
-            'type' => $this->type,
-            'message' => $this->message,
-            'dismissible' => $dismissible,
-        ]);
+        session(['flash_notification.dismissible' => $dismissible]);
     }
 
     /**
@@ -113,7 +118,7 @@ class Flash
      * @param $message
      * @return $this
      */
-    protected function putFlash($type, $message)
+    protected function putFlash(string $type, string $message = null)
     {
         $this->type = $type;
 
@@ -121,10 +126,23 @@ class Flash
 
         session()->flash('flash_notification', [
             'type' => $this->type,
+            'class' => $this->getNotificationClass(),
             'message' => $this->message,
-            'dismissible' => config('flash.dismissible')
+            'dismissible' => config('flash.dismissible'),
         ]);
 
         return $this;
+    }
+
+    /**
+     * The class applied to the flash notification type
+     *
+     * @return string
+     */
+    protected function getNotificationClass(): string
+    {
+        $framework = config('flash.framework') ?? 'tailwind';
+
+        return config("flash.classes.{$framework}.{$this->type}") ?? 'success';
     }
 }
