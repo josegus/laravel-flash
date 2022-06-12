@@ -1,13 +1,12 @@
 {
     "name": "josegus/laravel-flash",
     "require": {
-        "php": ">=7.2",
-        "illuminate/session": "^6.0|^7.0|^8.0"
+        "php": "^8.0",
+        "illuminate/session": "^9.0"
     },
     "require-dev": {
-        "friendsofphp/php-cs-fixer": "^2.18",
-        "orchestra/testbench": "^4.0|^5.0|^6.0",
-        "vimeo/psalm": "^4.7"
+        "friendsofphp/php-cs-fixer": "^3.0",
+        "orchestra/testbench": "^7.0"
     },
     "license": "MIT",
     "authors": [
@@ -38,7 +37,6 @@
     },
     "scripts": {
         "format": "vendor/bin/php-cs-fixer fix --allow-risky=yes",
-        "psalm": "vendor/bin/psalm",
         "test": "vendor/bin/phpunit"
     },
     "config": {
