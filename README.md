@@ -2,18 +2,16 @@
 
 # Tailwind flash alert messages and validations for your Laravel apps
 
-[![Build Status](https://travis-ci.com/josegus/laravel-flash.svg?branch=master)](https://travis-ci.com/josegus/laravel-flash)
 [![Latest Stable Version](https://poser.pugx.org/josegus/laravel-flash/v)](//packagist.org/packages/josegus/laravel-flash) [![Total Downloads](https://poser.pugx.org/josegus/laravel-flash/downloads)](//packagist.org/packages/josegus/laravel-flash) [![Latest Unstable Version](https://poser.pugx.org/josegus/laravel-flash/v/unstable)](//packagist.org/packages/josegus/laravel-flash) [![License](https://poser.pugx.org/josegus/laravel-flash/license)](//packagist.org/packages/josegus/laravel-flash)
 
 This composer package offers an easy way to manage and show laravel flash message alert notifications. Works with Tailwindcss (default) and Bootstrap.
 
-It includes default messages for most commonly use actions such as "success", "error" messages,
-or CRUD operations (stored, updated, deleted).
+It includes default messages for most commonly used actions such as "success", "error" messages, or CRUD operations (stored, updated, deleted).
 
 
 ## Installation
 
-Require the package by executing:
+Install the package:
 
 ```bash
 composer require josegus/laravel-flash
@@ -27,7 +25,7 @@ Alert notifications use tailwind by default, but you can use bootstrap if you wa
 
 > If you are using tailwind with purgeCss, you may need to publish the views included in the package, so when Laravel compile the views, purgeCss will remove any unused css class.
 
-You can publish and modifiy the config and view files (seed docs below).
+You can publish and modify the config and view files (seed docs below).
 
 ## Usage
 
@@ -44,7 +42,7 @@ public function store()
 }
 ```
 
-The package includes most of common messages for different actions inside most laravel applications:
+The package includes most of the common messages for different actions inside most laravel applications:
 
 ```
 - flash('Nice job')                      : Flash an alert of type "success" with a custom message
@@ -57,10 +55,10 @@ The package includes most of common messages for different actions inside most l
 - flash()->deleted()                     : Flash an alert of type "success" with a default message (founded in flash.messages.deleted)
 - flash()->stored()->dismissible()       : Flash an alert of type "success" with a default message (founded in flash.messages.stored) that can be dismissible
 - flash()->stored()->dismissible(false)  : Flash an alert of type "success" with a default message (founded in flash.messages.stored) that should not be dismissible
-- flash()->queued()  : Flash an alert of type "queued" with a default message (founded in flash.messages.queued) that should not be dismissible
+- flash()->queued()  : Flash an alert of type "queued" with a default message that should not be dismissible (see flash.messages.queued inside config/flash.php)
 ```
 
-Once you have flashed a message in session, you will need to display it in your view. Use the component included in the packace:
+Once you have flashed a message in session, you will need to display it in your view. Use the component included in the package:
 
 ```html
 <x-flash::message />
@@ -75,13 +73,15 @@ with the package:
 
 ## Configuration
 
-You can export the config file to change default messages, views and enable some extra features. You may do so executing:
+You can export the config file to change default messages, views and enable some extra features. You can dot it executing:
 
 ```bash
 php artisan vendor:publish --tag=laravel-flash:config
 ```
 
-Now you should have a `flash.php` file inside the config folder. If you are upgrading the package, don't forget to include `--force` at the end of the above command, to force to re-publish the config file.
+Now you should have a `flash.php` file inside the config folder.
+
+> After upgrading laravel-flash to a major version, don't forget to include `--force` at the end of the above command, to force to re-publish the config file.
 
 
 ## Customizing views
@@ -97,9 +97,9 @@ Now you should have views inside `resources/views/vendor/flash` folder. If you a
 
 ## Using default validations view
 
-By default, the package show the validation errors inside the `flash::message` view. Validation errors are showed inside a "alert-danger" as an unordered list by default.
+By default, the package display the validation errors inside the `flash::message` view. Validation errors are displayed inside a "alert-danger" as an unordered list by default.
 
-You can disable this behaviour by changing `flash.validations.enabled` to `false` in config/flash.php file.
+You can disable this behaviour by changing `flash.validations.enabled` to `false` in `config/flash.php` file.
 
 If you wish, you can modify this view to adapt to your needs, executing:
 
@@ -127,7 +127,7 @@ necessary stylesheets.
     <!-- Use as blade component -->
     <x-flash::message />
 
-    <!-- Use with blade directive -->
+    <!-- Use as blade directive -->
     @include('flash::message')
 
     <p>Welcome to my website...</p>
