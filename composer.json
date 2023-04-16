@@ -2,11 +2,11 @@
     "name": "josegus/laravel-flash",
     "require": {
         "php": "^8.0",
-        "illuminate/session": "^9.0"
+        "illuminate/session": "^10.0"
     },
     "require-dev": {
         "friendsofphp/php-cs-fixer": "^3.0",
-        "orchestra/testbench": "^7.0"
+        "orchestra/testbench": "^8.0"
     },
     "license": "MIT",
     "authors": [
