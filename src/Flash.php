@@ -111,6 +111,8 @@ class Flash
         session(['flash_notification.dismissible' => $dismissible]);
     }
 
+
+
     /**
      * Put a new flash message with "$type" key
      *

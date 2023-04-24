@@ -1,4 +1,4 @@
-<div class="alert
+<div id="messages" class="alert
             {{ config('flash.class') }}
             {{ session('flash_notification.class') }}" role="alert"
 >
@@ -8,3 +8,11 @@
 
     <div>{!! session('flash_notification.message') !!}</div>
 </div>
+
+
+<script>
+    function hideFlashMessage() {
+        document.getElementById("messages").style.display = "none";
+    }
+    setTimeout(hideFlashMessage, 5000);
+</script>

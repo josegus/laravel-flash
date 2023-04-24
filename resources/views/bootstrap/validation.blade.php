@@ -1,4 +1,4 @@
-<div class="alert
+<div id="messages" class="alert
             {{ config('flash.validations.class') }}
             {{ config('flash.validations.classes.bootstrap') }}
             {{ config('flash.validations.dismissible') ? 'alert-dismissible' : '' }}"
@@ -13,3 +13,11 @@
         <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
     @endif
 </div>
+
+
+<script>
+    function hideFlashMessage() {
+        document.getElementById("messages").style.display = "none";
+    }
+    setTimeout(hideFlashMessage, 5000);
+</script>
